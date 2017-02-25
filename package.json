@@ -18,8 +18,11 @@
   "homepage": "https://github.com/saeedhomsy/APIsprint#readme",
   "dependencies": {
     "body-parser": "^1.16.1",
+    "chai": "^3.5.0",
     "express": "^4.14.1",
+    "mocha": "^3.2.0",
     "mongoose": "^4.8.4",
-    "morgan": "^1.8.1"
+    "morgan": "^1.8.1",
+    "request": "^2.79.0"
   }
 }
