@@ -2,12 +2,14 @@ var Category = require('./categoryModel.js');
 
 module.exports = {
     insertCategory: function (req, res) {
-        Category.create(req.body, function (err, category) {
-            if (err) {
-                throw err
-            }
-            res.json(category);
-        });
+        for (var i = 0; i < req.body.length; i++) {
+            Category.create(req.body[i], function (err, category) {
+                if (err) {
+                    throw err
+                }
+            });
+        }
+        res.json(req.body);
     },
 
     getAllCategories: function (req, res) {
@@ -19,8 +21,8 @@ module.exports = {
         });
     },
 
-     getCategoryByID: function (req, res) {
-        Category.findById(req.params._id,function (err, category) {
+    getCategoryByID: function (req, res) {
+        Category.findById(req.params._id, function (err, category) {
             if (err) {
                 throw err
             }
