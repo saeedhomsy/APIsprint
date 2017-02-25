@@ -1,0 +1,46 @@
+{
+  "/api": {
+    "/movies": {
+      "/": {
+        "GET": {
+          "description": "get all movies",
+          "response": "200 application/json",
+          "data": "[{},{}]"
+        },
+        "POST": {
+          "description": "create and return new movie",
+          "response": "201 application/json",
+          "data": "{}"
+        }
+      },
+      "/:id": {
+        "GET": {
+          "description": "returns movie with that title",
+          "response": "200 application/json",
+          "data": "{}"
+        }
+      }
+    },
+    "/books": {
+      "/": {
+        "GET": {
+          "description": "get all books",
+          "response": "200 application/json",
+          "data": "[{},{}]"
+        },
+        "POST": {
+          "description": "create and return a list of books",
+          "response": "201 application/json",
+          "data": "[{},{}]"
+        }
+      },
+      "/:id": {
+        "GET": {
+          "description": "returns book with that title",
+          "response": "200 application/json",
+          "data": "{}"
+        }
+      }
+    }
+  }
+}
