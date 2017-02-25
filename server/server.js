@@ -22,10 +22,9 @@ mongoose.connect('mongodb://localhost/kickoutdb', function (err) {
 });
 
 //set the port number and console log something so that 
-var port = 8888;
+var port = process.env.PORT || 8888;
 
 //you know that the mongodb is connected
-//console.log('connect to db')
 
 //=============================================================================
 /*									Server   								 */
@@ -33,7 +32,7 @@ var port = 8888;
 
 //set express to listen to for requests or certain port
 app.listen(port, function () {
-	console.log('listen for port 8888....')
+	console.log('listen for port ' + port)
 })
 
 
